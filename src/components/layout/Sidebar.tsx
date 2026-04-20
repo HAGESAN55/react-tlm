@@ -5,12 +5,22 @@ import {
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import cn from "../../lib/utils";
+  type Props = {
+    collapsed: boolean;
+    setCollapsed: (collapsed: boolean) => void;
+  };
 
-export default function Sidebar() {
+export default function Sidebar( { collapsed }: Props) {
 
    return (
-    <aside className="w-64 bg-white border-gray-500 border-r">
-      <div className="p-6 font-bold">TLM Harbas</div>
+   <aside
+    className={`shrink-0 bg-white border-r border-gray-200 transition-all duration-100 ${
+      collapsed ? "w-20" : "w-64"
+    }`}
+    >
+      <div className="p-6 font-bold">
+        {collapsed ? "TLM" : "TLM Harbas"}
+      </div>
 
       <nav className="px-4 space-y-2">
 
@@ -25,11 +35,11 @@ export default function Sidebar() {
           }
         >
           <LayoutDashboard className="w-5 h-5" />
-          Dashboard
+          {!collapsed && "Dashboard"}
         </NavLink>
 
         <NavLink
-          to="/users"
+          to="/Pasien"
           className={({ isActive }) =>
             `flex items-center gap-2 p-2 rounded-lg transition ${
               isActive
@@ -39,7 +49,7 @@ export default function Sidebar() {
           }
         >
           <Users className="w-5 h-5" />
-          Users
+          {!collapsed && <span>Pasien</span>}
         </NavLink>
 
       </nav>

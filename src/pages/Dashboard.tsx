@@ -4,13 +4,19 @@ import { Users, Activity, CalendarDays } from "lucide-react";
 
 function Dashboard() {
   return (
+    
+
     <Layout>
+        <div className="mb-6">
+          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+          <p className="text-gray-500 mt-2">Welcome, User!</p>
+        </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/" className="hover:scale-101 transition-transform">
           <Card 
           title="Total Pasien"
           value="1,245"
-          icon={<Users className="wh-6 h-6 text-blue-500" />}
+          icon={<Users className="w-6 h-6 text-blue-500" />}
           />
         </a>
         <a href="/" className="hover:scale-101 transition-transform">

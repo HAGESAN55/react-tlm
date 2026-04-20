@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
-import Users from '../pages/Users';
+import Pasien from '../pages/Users';
 
 
 export default function AppRouter() {
@@ -8,7 +8,7 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/Pasien" element={<Pasien />} />
       </Routes>
     </BrowserRouter>
   );
