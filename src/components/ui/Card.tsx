@@ -1,4 +1,4 @@
-function Card({ title, value }: any) {
+export default function Card({ title, value }: any) {
   return (
     <div className="bg-white p-5 rounded-xl shadow-sm border">
       <p className="text-gray-500 text-sm">{title}</p>
@@ -6,5 +6,3 @@ function Card({ title, value }: any) {
     </div>
   );
 }
-
-export default Card;

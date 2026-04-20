@@ -32,7 +32,7 @@ export default function Sidebar() {
 
     return (
     <div className="w-64 bg-white border-r">
-      <div className="p-6 font-bold text-lg">Admin</div>
+      <div className="p-6 font-bold text-lg">TLM Harbas</div>
         <a className="flex items-center gap-2 p-2 rounded-lg bg-blue-50 text-blue-600">
           <LayoutDashboard className="w-5 h-5" />Dashboard
         </a>
