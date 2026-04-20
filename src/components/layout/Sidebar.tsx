@@ -9,7 +9,7 @@ import cn from "../../lib/utils";
 export default function Sidebar() {
 
    return (
-    <aside className="w-64 bg-white border-r">
+    <aside className="w-64 bg-white border-gray-500 border-r">
       <div className="p-6 font-bold">TLM Harbas</div>
 
       <nav className="px-4 space-y-2">
