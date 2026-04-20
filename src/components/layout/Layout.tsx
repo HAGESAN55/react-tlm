@@ -1,7 +1,7 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Layout ({children}: {children: React.ReactNode}) {
+export default function Layout ({children}: {children: React.ReactNode}) {
     return (
         <div className="flex h-screen bg-gray-100">
             <Sidebar />
@@ -15,5 +15,3 @@ function Layout ({children}: {children: React.ReactNode}) {
 
     );
 }
-
-export default Layout;
