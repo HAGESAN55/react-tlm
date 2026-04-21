@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
-import Pasien from '../pages/Users';
+import Pasien from '../pages/Pasien';
 
 
 export default function AppRouter() {
