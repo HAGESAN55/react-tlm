@@ -12,7 +12,7 @@ function Dashboard() {
           <p className="text-gray-500 mt-2">Welcome, User!</p>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="/" className="hover:scale-101 transition-transform">
+        <a href="/Pasien" className="hover:scale-101 transition-transform">
           <Card 
           title="Total Pasien"
           value="1,245"
@@ -25,7 +25,7 @@ function Dashboard() {
           value="$12,340" 
           icon={<Activity className="w-6 h-6 text-green-500" />} />
         </a>
-        <a href="/" className="hover:scale-101 transition-transform">
+        <a href="/Pemeriksaan" className="hover:scale-101 transition-transform">
           <Card 
           title="Pemeriksaan" 
           value="320" 

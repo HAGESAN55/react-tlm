@@ -1,3 +1,4 @@
+import { ChevronLeft, Pencil, Trash2 } from 'lucide-react';
 import Layout from "../components/layout/Layout";
 
     type Pasien = {
@@ -36,6 +37,12 @@ export default function Pasien() {
     return (
         <Layout>
             <div className="mb-8">
+                <button 
+                    onClick={() => window.history.back()}
+                    className="flex items-center gap-2 text-gray-600 hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg transition">
+                    <ChevronLeft className="w-5 h-5" />
+                    Back
+                </button>
                 <h1 className="text-2xl font-bold">Data Pasien</h1>
                 <p className="text-gray-500  mt-1">
                     Daftar Pasien yang telah terdaftar.
@@ -53,11 +60,12 @@ export default function Pasien() {
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Kategori</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Gender</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Doktor</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Action</th>
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                         {data.map((pasien) => (
-                            <tr key={pasien.id}>
+                            <tr key={pasien.id} className="hover:bg-gray-100 transition-colors">
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.id}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.tgl}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.noreg}</td>
@@ -65,6 +73,16 @@ export default function Pasien() {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.kategori}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.gender}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.doktor}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <div className="flex items-center gap-2">
+                                        <a href="/Pasien" className="text-yellow-500 hover:text-yellow-700">
+                                            <Pencil className="w-5 h-5" />
+                                        </a>
+                                        <button className="text-red-500 hover:text-red-700 ml-4">
+                                            <Trash2 className="w-5 h-5" />
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

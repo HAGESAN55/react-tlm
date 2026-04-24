@@ -1,7 +1,8 @@
 import { 
   Users, 
   LayoutDashboard, 
-  Settings
+  Settings,
+  ClipboardList
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import cn from "../../lib/utils";
@@ -50,6 +51,31 @@ export default function Sidebar( { collapsed }: Props) {
         >
           <Users className="w-5 h-5" />
           {!collapsed && <span>Pasien</span>}
+        </NavLink>
+
+        <NavLink
+          to="/Pemeriksaan"
+          className={({ isActive }) => 
+            `flex item-center gap-2 p-2 rounded-lg transition ${isActive ? "bg-blue-50 text-blue-600" : "text-gray-600 hover:bg-gray-100"}`}
+        >
+          <ClipboardList className="w-5 h-5" />
+          {!collapsed && <span>Pemeriksaan</span>}
+        </NavLink>
+
+
+
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            `flex items-center gap-2 p-2 rounded-lg transition ${
+              isActive
+                ? "bg-blue-50 text-blue-600"
+                : "text-gray-600 hover:bg-gray-100"
+            }`
+          }
+        >
+          <Settings className="w-5 h-5" />
+          {!collapsed && <span>Settings</span>}
         </NavLink>
 
       </nav>
