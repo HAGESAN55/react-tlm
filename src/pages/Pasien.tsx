@@ -49,9 +49,9 @@ export default function Pasien() {
                 </p>
             </div>
 
-            <div className="bg-white rounded-2xl border shadow-sm overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50 font-bold">
+                    <thead className="bg-gray-100 font-bold">
                         <tr>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">No</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Tanggal</th>
@@ -65,7 +65,7 @@ export default function Pasien() {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                         {data.map((pasien) => (
-                            <tr key={pasien.id} className="hover:bg-gray-100 transition-colors">
+                            <tr key={pasien.id} className="hover:bg-gray-50 transition-colors">
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.id}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.tgl}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{pasien.noreg}</td>

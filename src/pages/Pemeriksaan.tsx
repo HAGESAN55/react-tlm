@@ -61,9 +61,9 @@ export default function PemeriksaanPage() {
         </div>
 
         {/* Table */}
-        <div className="bg-white rounded-2xl border overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <table className="w-full text-sm">
-            <thead className="bg-gray-50 text-gray-600">
+            <thead className="bg-gray-100 text-gray-600">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                     <input type="checkbox" className="w-4 h-4" disabled/>
@@ -78,7 +78,7 @@ export default function PemeriksaanPage() {
               </tr>
             </thead>
 
-            <tbody className="bg white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-gray-200">
               {data.map((item, index) => (
                 <tr key={item.id} className="border-t hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
